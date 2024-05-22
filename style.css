@@ -4,6 +4,28 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+.navbar {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px; /* Add padding to create space around the navigation items */
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
 .container {
     display: flex;
     flex-direction: column;
