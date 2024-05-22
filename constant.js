@@ -7,42 +7,184 @@ const jsonData = [
     { "id": 4, "name": "GL JML" },
     { "id": 5, "name": "GL Bastilla JML" },
     { "id": 6, "name": "GL Rey" },
+    { "id": 7, "name": "GL Kylo" },
+    { "id": 8, "name": "GL SEE" },
+    { "id": 9, "name": "GL Leia" },
+    { "id": 10, "name": "Sith Empire" },
+    { "id": 11, "name": "CLS" },
+    { "id": 12, "name": "GAS 501st" },
+    { "id": 13, "name": "Omi Phasma" },
+    { "id": 14, "name": "Starkiller" },
+    { "id": 15, "name": "Omi Geos" },
+    { "id": 16, "name": "Omi GG" },
+    { "id": 17, "name": "Padme" },
+    { "id": 18, "name": "(Veers) Imperial Troopers" },
+    { "id": 19, "name": "Nightsisters" },
+    { "id": 20, "name": "Maul" },
+    { "id": 21, "name": "Kelleran Beq" },
+    { "id": 22, "name": "Bounty Hunters" },
+    { "id": 23, "name": "(Iden) Imperial Troopers" },
 ];
 
 const propertiesData = {
+    // LV
     1: { 
         "Hard Counter": "Standard JMK", 
         "Good Counter": "JML with Jedi Knight Cal",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // JMK
     2: {
         "Hard Counter": "Standard JMK", 
         "Good Counter": "JML with Jedi Knight Cal",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // Jabba
     3: { 
         "Hard Counter": "Standard JMK", 
         "Good Counter": "",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // JML
     4: { 
         "Hard Counter": "Inquisitors, SEE", 
         "Good Counter": "",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // Bast JML
     5: {
         "Hard Counter": "SEE", 
         "Good Counter": "Inquisitors",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // Rey
     6: { 
-        "Hard Counter": "JML w/JKCK", 
+        "Hard Counter": "JML with JKCK", 
         "Good Counter": "SK (No Datacron)",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // SLKR
+    7: { 
+        "Hard Counter": "Standard JML, JMK", 
+        "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // SEE
+    8: {
+        "Hard Counter": "Standard JMK", 
+        "Good Counter": "JML with Jedi Knight Cal",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Leia
+    9: { 
+        "Hard Counter": "", 
+        "Good Counter": "Standard Leia",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Sith Empire
+    10: { 
+        "Hard Counter": "GAS", 
+        "Good Counter": "JKL",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // CLS
+    11: {
+        "Hard Counter": "CLS (Faster Han)", 
+        "Good Counter": "EP",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // GAS
+    12: { 
+        "Hard Counter": "CLS", 
+        "Good Counter": "GAS",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Omi Phasma
+    13: { 
+        "Hard Counter": "CLS, Raddus", 
+        "Good Counter": "GG with DDK Omicron, Hux FO",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // SK
+    14: {
+        "Hard Counter": "CLS", 
+        "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Geos
+    15: { 
+        "Hard Counter": "Veers IT, EP/MJ", 
+        "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Omi DDK
+    16: { 
+        "Hard Counter": "Sith Empire, Veers IT", 
+        "Good Counter": "Shaak Clones, Raddus, JKR",
+        "Soft Counter": "Padme",
+        "Dicey": ""
+    },
+    // Padme
+    17: {
+        "Hard Counter": "Traya (Fast)", 
+        "Good Counter": "CLS, Inquisitors (if Heavy Jedi)",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Veers IT
+    18: { 
+        "Hard Counter": "Raddus", 
+        "Good Counter": "CLS, Veers IT",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // NS
+    19: { 
+        "Hard Counter": "", 
+        "Good Counter": "GAS, Tuskens, Veers IT",
+        "Soft Counter": "Phoenix with Rex, Iden IT, Maul, BH(Fetts)",
+        "Dicey": ""
+    },
+    // Maul
+    20: {
+        "Hard Counter": "", 
+        "Good Counter": "CLS",
+        "Soft Counter": "",
+        "Dicey": "Traya"
+    },
+    // KB
+    21: { 
+        "Hard Counter": "DTMG", 
+        "Good Counter": "Nightsisters, Inquisitors, UFU, Malgus SE",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // BH
+    22: { 
+        "Hard Counter": "", 
+        "Good Counter": "Finn/Zorii",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Iden IT
+    23: {
+        "Hard Counter": "GAS, Raddus", 
+        "Good Counter": "",
         "Soft Counter": "",
         "Dicey": ""
     }
