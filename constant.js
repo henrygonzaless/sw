@@ -1,9 +1,12 @@
 
 // JSON object
 const jsonData = [
-    { "id": 1, "name": "Lord Vader" },
-    { "id": 2, "name": "Jedi Master Kenobi" },
-    { "id": 3, "name": "Jabba" }
+    { "id": 1, "name": "GL Lord Vader" },
+    { "id": 2, "name": "GL Jedi Master Kenobi" },
+    { "id": 3, "name": "GL Jabba" },
+    { "id": 4, "name": "GL JML" },
+    { "id": 5, "name": "GL Bastilla JML" },
+    { "id": 6, "name": "GL Rey" },
 ];
 
 const propertiesData = {
@@ -22,6 +25,24 @@ const propertiesData = {
     3: { 
         "Hard Counter": "Standard JMK", 
         "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    4: { 
+        "Hard Counter": "Inquisitors, SEE", 
+        "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    5: {
+        "Hard Counter": "SEE", 
+        "Good Counter": "Inquisitors",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    6: { 
+        "Hard Counter": "JML w/JKCK", 
+        "Good Counter": "SK (No Datacron)",
         "Soft Counter": "",
         "Dicey": ""
     }
