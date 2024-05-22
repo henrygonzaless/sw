@@ -18,12 +18,12 @@ const jsonData = [
     { "id": 15, "name": "Omi Geos" },
     { "id": 16, "name": "Omi GG" },
     { "id": 17, "name": "Padme" },
-    { "id": 18, "name": "(Veers) Imperial Troopers" },
+    { "id": 18, "name": "Veers Imperial Troopers" },
     { "id": 19, "name": "Nightsisters" },
     { "id": 20, "name": "Maul" },
     { "id": 21, "name": "Kelleran Beq" },
     { "id": 22, "name": "Bounty Hunters" },
-    { "id": 23, "name": "(Iden) Imperial Troopers" },
+    { "id": 23, "name": "Iden Imperial Troopers" },
 ];
 
 const propertiesData = {
@@ -191,12 +191,16 @@ const propertiesData = {
 };
 
 function populateDropdown() {
-    const dropdown = document.getElementById('dropdown')
+    const dropdown = document.getElementById('dropdown');
+
+    // Sort the jsonData alphabetically by the name property
+    jsonData.sort((a, b) => a.name.localeCompare(b.name));
+
     jsonData.forEach(item => {
-        const option = document.createElement('option')
-        option.value = item.id
-        option.textContent = item.name
-        dropdown.appendChild(option)
+        const option = document.createElement('option');
+        option.value = item.id;
+        option.textContent = item.name;
+        dropdown.appendChild(option);
     });
 }
 
