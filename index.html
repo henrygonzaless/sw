@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title> ID66 </title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label for="dropdown">Team to Beat</label>
-    <select id="dropdown"></select>
+    <div class="container">
+        <div class="dropdown-container">
+            <label for="dropdown">Team to Beat:</label>
+            <select id="dropdown">
+                <option value="" selected disabled>Select an option</option>
+            </select>
+        </div>
+        <div class="table-container">
+            <table id="propertiesTable" border="1">
+                <thead>
+                    <tr id="tableHeaders"></tr>
+                </thead>
+                <tbody>
+                    <tr id="tableValues"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
-    <div id="properties"></div>
     <script src="constant.js"></script>
-
 </body>
 </html>

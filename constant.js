@@ -190,7 +190,6 @@ const propertiesData = {
     }
 };
 
-// Function to populate dropdown
 function populateDropdown() {
     const dropdown = document.getElementById('dropdown');
     jsonData.forEach(item => {
@@ -201,17 +200,31 @@ function populateDropdown() {
     });
 }
 
-// Function to display properties based on selected option
+// Function to initialize table headers based on propertiesData keys
+function initializeTableHeaders() {
+    const tableHeaders = document.getElementById('tableHeaders');
+    const firstKey = Object.keys(propertiesData)[0];
+    if (firstKey) {
+        const properties = propertiesData[firstKey];
+        for (const key in properties) {
+            const th = document.createElement('th');
+            th.textContent = key;
+            tableHeaders.appendChild(th);
+        }
+    }
+}
+
+// Function to display properties in table based on selected option
 function displayProperties(optionId) {
-    const propertiesDiv = document.getElementById('properties');
-    propertiesDiv.innerHTML = ''; // Clear previous properties
+    const tableValues = document.getElementById('tableValues');
+    tableValues.innerHTML = ''; // Clear previous values
 
     const properties = propertiesData[optionId];
     if (properties) {
         for (const key in properties) {
-            const propertyDiv = document.createElement('div');
-            propertyDiv.textContent = `${key}: ${properties[key]}`;
-            propertiesDiv.appendChild(propertyDiv);
+            const td = document.createElement('td');
+            td.textContent = properties[key];
+            tableValues.appendChild(td);
         }
     }
 }
@@ -222,5 +235,8 @@ document.getElementById('dropdown').addEventListener('change', function() {
     displayProperties(selectedOptionId);
 });
 
-// Call the function to populate the dropdown when the page loads
-window.onload = populateDropdown;
+// Call the function to populate the dropdown and initialize the table headers when the page loads
+window.onload = function() {
+    populateDropdown();
+    initializeTableHeaders();
+};
