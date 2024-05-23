@@ -7,6 +7,27 @@
     <title> ID66 </title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 50px); /* Adjust height based on navbar height */
+            margin-top: 50px; /* Height of the navbar */
+        }
+
+        /* Chart container styles */
+        .chart-container {
+            width: 100%;
+            max-width: 90%; /* Increase max-width to make chart larger */
+            height: 80vh; /* Adjust height to occupy more space */
+        }
+
+        /* Ensuring the canvas resizes with the container */
+        canvas {
+            display: block; /* Remove default inline style */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -17,8 +38,10 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div style="width: 100%; margin: auto;">
-        <canvas id="myBarChart"></canvas>
+    <div class="flex-container">
+        <div class="chart-container">
+            <canvas id="myBarChart"></canvas>
+        </div>    
     </div>
 
     <script>
