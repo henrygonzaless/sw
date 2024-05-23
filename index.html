@@ -6,36 +6,182 @@
 
     <title> ID66 </title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .navbar {
+            background-color: #333;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;        
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 20px; /* Add padding to create space around the navigation items */
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .navbar li:last-child {
+            margin-right: 0;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .navbar li:last-child {
+            margin-right: 0;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            margin-top: 50px; /* Adjusted to accommodate the navbar */
+            padding: 20px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center; /* Center align content */
+        }
+        h1 {
+            margin: 20px 0;
+            color: #333
+        }
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .box {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 8px;
+            box-sizing: border-box;
+            text-align: left; /* Ensure h2 text alignment */
+        }
+        .box h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        .box ul {
+            margin: 0;
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .box ul li {
+            margin-bottom: 5px;
+        }
+        .video-container {
+            margin-top: 20px;
+            width: 640px;
+            max-width: 100%;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .video-wrapper {
+            width: 100%;
+            height: 360px; /* Fixed height */
+            overflow: hidden; /* Prevents the video from exceeding its container */
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Ensures the video fits within the container */
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <!-- <li><a href="#">About</a></li> -->
-            <!-- <li><a href="#">Services</a></li> -->
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tw.html">TW</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="dropdown-container">
-            <label for="dropdown">Team to Beat:</label>
-            <select id="dropdown">
-                <option value="" selected disabled>Select an option</option>
-            </select>
+    <div class="content">
+        <h1>Imperial Decree 66</h1>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>General</h2>
+                <ul>
+                    <li>410M+ GP</li>
+                    <li>Semi-Competitive</li>
+                    <li>Discord</li>
+                    <li>Currently Full</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>Raid (Speeder)</h2>
+                <ul>
+                    <li>108M Reward Box</li>
+                </ul>
+            </div>        
+            <div class="box">
+                <h2>TW</h2>
+                <ul>
+                    <li>Droid Brains in Rewards</li>
+                    <li>Minimum 100 (total) banners</li>
+                    <li>Joining is <b>not</b> forced</li>
+                </ul>
+            </div>        
+            <div class="box">
+                <h2>TB (RotE)</h2>
+                <ul>
+                    <li>25+ stars</li>
+                    <li>5+ Reva shards</li>
+                    <li>Volunteer system for platoons</li>
+                    <li>Working towards Zeffo</li>
+                </ul>
+            </div>        
+            <!-- Add more boxes as needed -->
         </div>
-        <div class="table-container">
-            <table id="propertiesTable" border="1">
-                <thead>
-                    <tr id="tableHeaders"></tr>
-                </thead>
-                <tbody>
-                    <tr id="tableValues"></tr>
-                </tbody>
-            </table>
+        <div class="video-container">
+            <div class="video-wrapper">
+                <video controls muted poster=".jpg">
+                    <source src="assets/recruitment.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
     </div>
 
-    <script src="constant.js"></script>
 </body>
 </html>
