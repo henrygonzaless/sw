@@ -24,6 +24,9 @@ html, body {
     color: white;
     text-decoration: none;
 }
+.navbar li:last-child {
+    margin-right: 0;
+}
 
 
 .container {
