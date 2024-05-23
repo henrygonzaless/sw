@@ -12,20 +12,40 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: calc(100vh - 50px); /* Adjust height based on navbar height */
+            min-height: calc(100vh - 50px); /* Adjust height based on navbar height */
             margin-top: 50px; /* Height of the navbar */
         }
 
         /* Chart container styles */
         .chart-container {
-            width: 100%;
-            max-width: 90%; /* Increase max-width to make chart larger */
-            height: 80vh; /* Adjust height to occupy more space */
+            width: 90%;
+            max-width: 1200px; /* Increase max-width to make chart larger */
         }
 
         /* Ensuring the canvas resizes with the container */
         canvas {
             display: block; /* Remove default inline style */
+            width: 100% !important;
+            height: auto !important; /* Maintain aspect ratio */
+        }
+
+        /* Media queries for responsive chart height */
+        @media (min-width: 1200px) {
+            .chart-container {
+                height: 70vh;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+            .chart-container {
+                height: 60vh;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .chart-container {
+                height: 50vh;
+            }
         }
     </style>
 </head>
