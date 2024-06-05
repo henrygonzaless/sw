@@ -45,7 +45,7 @@ const propertiesData = {
     // Jabba
     3: { 
         "Hard Counter": "Standard JMK", 
-        "Good Counter": "",
+        "Good Counter": "SLKR (Datacron)",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -66,7 +66,7 @@ const propertiesData = {
     // Rey
     6: { 
         "Hard Counter": "JML with JKCK", 
-        "Good Counter": "SK (No Datacron)",
+        "Good Counter": "SK (If Rey has no Datacron), SLKR (Datacron)",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -80,7 +80,7 @@ const propertiesData = {
     // SEE
     8: {
         "Hard Counter": "Standard JMK", 
-        "Good Counter": "JML with Jedi Knight Cal",
+        "Good Counter": "JML with Jedi Knight Cal, SLKR",
         "Soft Counter": "",
         "Dicey": ""
     },
