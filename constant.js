@@ -24,6 +24,7 @@ const jsonData = [
     { "id": 21, "name": "Kelleran Beq" },
     { "id": 22, "name": "Bounty Hunters" },
     { "id": 23, "name": "Iden Imperial Troopers" },
+    { "id": 24, "name": "Phoenix"}
 ];
 
 const propertiesData = {
@@ -185,6 +186,13 @@ const propertiesData = {
     23: {
         "Hard Counter": "GAS, Raddus", 
         "Good Counter": "",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Phoenix
+    24: {
+        "Hard Counter": "Sith Empire, Starkiller", 
+        "Good Counter": "Padme, Cere UFU",
         "Soft Counter": "",
         "Dicey": ""
     }
