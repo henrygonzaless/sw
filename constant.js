@@ -192,7 +192,7 @@ const propertiesData = {
     // Phoenix
     24: {
         "Hard Counter": "Sith Empire, Starkiller", 
-        "Good Counter": "Padme, Cere UFU",
+        "Good Counter": "Padme, Cere UFU, Tuskens",
         "Soft Counter": "",
         "Dicey": ""
     }
