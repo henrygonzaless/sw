@@ -24,7 +24,10 @@ const jsonData = [
     { "id": 21, "name": "Kelleran Beq" },
     { "id": 22, "name": "Bounty Hunters" },
     { "id": 23, "name": "Iden Imperial Troopers" },
-    { "id": 24, "name": "Phoenix"}
+    { "id": 24, "name": "Phoenix"},
+    { "id": 25, "name": "Mon Mothma"},
+    { "id": 26, "name": "Grand Inquisitor"},
+
 ];
 
 const propertiesData = {
@@ -193,6 +196,20 @@ const propertiesData = {
     24: {
         "Hard Counter": "Sith Empire, Starkiller", 
         "Good Counter": "Padme, Cere UFU, Tuskens",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Mon Mothma Rebel Fighters
+    25: {
+        "Hard Counter": "GAS, CLS, Traya", 
+        "Good Counter": "Veers IT, Sidious (datacron)",
+        "Soft Counter": "Cere UFU, Finn/Zorii",
+        "Dicey": ""
+    },
+    // Inquisitors
+    26: {
+        "Hard Counter": "Raddus", 
+        "Good Counter": "Grand Inquisitor",
         "Soft Counter": "",
         "Dicey": ""
     }
