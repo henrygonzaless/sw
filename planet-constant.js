@@ -10,6 +10,9 @@ const jsonData = [
     { "id": 7, "name": "Kashyyyk (LS)" },
     { "id": 8, "name": "Tatooine (NS)" },
     { "id": 9, "name": "Dathomir (DS)" },
+    { "id": 10, "name": "Lothal (LS)" },
+    { "id": 11, "name": "Kessel (NS)" },
+    { "id": 12, "name": "Haven-Class Medical Station (DS)" },
 ];
 
 const propertiesData = {
@@ -63,6 +66,24 @@ const propertiesData = {
     },
     // Dathomir (DS)
     9: { 
+        "CMs": "",
+        "SMs": "",
+        "Ships": ""
+    },
+    // Lothal (LS)
+    10: { 
+        "CMs": "",
+        "SMs":"",
+        "Ships": ""
+    },
+    // Kessel (NS)
+    11: { 
+        "CMs": "JML, JKL, GMY, GK, Shaak-Ti",
+        "SMs":"GI Inquisitors",
+        "Ships": "Standard Executor"
+    },
+    // Haven-Class Medical Station (DS)
+    12: { 
         "CMs": "",
         "SMs": "",
         "Ships": ""
