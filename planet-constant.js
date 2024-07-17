@@ -94,7 +94,7 @@ function populateDropdown() {
     const dropdown = document.getElementById('dropdown')
 
     // Sort the jsonData alphabetically by the name property
-    jsonData.sort((a, b) => a.name.localeCompare(b.name))
+    // jsonData.sort((a, b) => a.name.localeCompare(b.name))
 
     jsonData.forEach(item => {
         const option = document.createElement('option')
