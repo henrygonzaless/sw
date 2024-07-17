@@ -7,6 +7,9 @@ const jsonData = [
     { "id": 4, "name": "Zeffo (LS)" },
     { "id": 5, "name": "Felucia (NS)" },
     { "id": 6, "name": "Geonosis (DS)" },
+    { "id": 7, "name": "Kashyyyk (LS)" },
+    { "id": 8, "name": "Tatooine (NS)" },
+    { "id": 9, "name": "Dathomir (DS)" },
 ];
 
 const propertiesData = {
@@ -44,6 +47,24 @@ const propertiesData = {
     6: { 
         "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek)",
         "SMs": "Standard LV",
+        "Ships": ""
+    },
+    // Kashyyyk (LS)
+    7: { 
+        "CMs": "",
+        "SMs":"",
+        "Ships": ""
+    },
+    // Tatooine (NS)
+    8: { 
+        "CMs": "JML, JKL, GMY, GK, Shaak-Ti",
+        "SMs":"GI Inquisitors",
+        "Ships": "Standard Executor"
+    },
+    // Dathomir (DS)
+    9: { 
+        "CMs": "",
+        "SMs": "",
         "Ships": ""
     },
 };
