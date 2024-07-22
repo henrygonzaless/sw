@@ -26,7 +26,9 @@ const jsonData = [
     { "id": 23, "name": "Iden Imperial Troopers" },
     { "id": 24, "name": "Phoenix"},
     { "id": 25, "name": "Mon Mothma"},
-    { "id": 26, "name": "Grand Inquisitor"}
+    { "id": 26, "name": "Grand Inquisitor"},
+    { "id": 27, "name": "Cere Junda UFU"},
+
 ];
 
 const propertiesData = {
