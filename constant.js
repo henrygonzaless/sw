@@ -213,7 +213,13 @@ const propertiesData = {
         "Good Counter": "Grand Inquisitor, Nightsisters (Talzin)",
         "Soft Counter": "",
         "Dicey": ""
-    }
+    },
+    27: {
+        "Hard Counter": "", 
+        "Good Counter": "Sith Empire (Malgus L), Bane Duo",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
 };
 
 function populateDropdown() {
