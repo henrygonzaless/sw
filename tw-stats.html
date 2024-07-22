@@ -5,49 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title> ID66 </title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <link rel="stylesheet" href="style.css">
-    <style>
-        .flex-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 50px); /* Adjust height based on navbar height */
-            margin-top: 50px; /* Height of the navbar */
-        }
-
-        /* Chart container styles */
-        .chart-container {
-            width: 90%;
-            max-width: 1200px; /* Increase max-width to make chart larger */
-        }
-
-        /* Ensuring the canvas resizes with the container */
-        canvas {
-            display: block; /* Remove default inline style */
-            width: 100% !important;
-            height: auto !important; /* Maintain aspect ratio */
-        }
-
-        /* Media queries for responsive chart height */
-        @media (min-width: 1200px) {
-            .chart-container {
-                height: 70vh;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            .chart-container {
-                height: 60vh;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .chart-container {
-                height: 50vh;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -58,72 +17,24 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="flex-container">
-        <div class="chart-container">
-            <canvas id="myBarChart"></canvas>
-        </div>    
+    <div class="sidebar">
+        <div class="dropdown">
+            <button class="dropdown-btn">March</button>
+            <div class="dropdown-content">
+                <a href="tw/03-03.html">3rd (L)</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">May</button>
+            <div class="dropdown-content">
+                <a href="tw/05-23.html">23rd (W)</a>
+            </div>
+            <div class="dropdown-content">
+                <a href="tw/05-26.html">26th (W)</a>
+            </div>
+        </div>
+
     </div>
-
-    <script>
-        // Wait until the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', (event) => {
-            // Get the context of the canvas element we want to select
-            var ctx = document.getElementById('myBarChart').getContext('2d');
-
-            // Create a new Chart instance
-            var myBarChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Trench', 'GI', 'GG', 'Veers IT', 'Mauldalorians', 'Talzin','Raddus', 'JTR', 'Reva', 'Starkiller', 'Bossk', 'Bobba', 'Shaak-Ti', 'Geos', 'Mon Mothma', 'GL Anakin', 'GL Jabba', 'GL Rey', 'GL Leia', 'GL Kylo'], // X-axis labels
-                    datasets: [{
-                        label: 'First Attack Efficiency', // Chart label
-                        data: [0, 1, 0, 1, 0.5, 0.5, 0.89, 1, 0, 0.67, 0, 1, 1, 0.82, 0, 0.5, 0.78, 0.73, 1, 1], // Data points
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)',
-                            'rgba(199, 199, 199, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)',
-                            'rgba(199, 199, 199, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            title: {
-                                display: true,
-                                text: 'First Attack Efficiency'
-                            }
-                        },
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Squads Attacked'
-                            }
-                        }
-                    },
-                    plugins: {
-                        title: {
-                            display: true,
-                            text: 'March 3, 2024'
-                        }
-                    }
-                }
-            });
-        });
-    </script>
+    
 </body>
 </html>
