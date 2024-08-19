@@ -133,14 +133,14 @@ const propertiesData = {
     // Geos
     15: { 
         "Hard Counter": "Veers IT, EP/MJ", 
-        "Good Counter": "Cere UFU (Omicrons)",
-        "Soft Counter": "Mauldalorians (Dark Side)",
+        "Good Counter": "Cere UFU (Omicrons), Omi Boba SoJ",
+        "Soft Counter": "Mauldalorians (Dark Side), Omi Boba SoJ",
         "Dicey": ""
     },
     // Omi DDK
     16: { 
         "Hard Counter": "Sith Empire", 
-        "Good Counter": "Shaak Clones, Raddus, JKR",
+        "Good Counter": "Shaak Clones, Raddus, JKR, Bo Katan Mandalore",
         "Soft Counter": "Padme, GAS 501st",
         "Dicey": "Veers IT"
     },
@@ -212,7 +212,7 @@ const propertiesData = {
         "Hard Counter": "Raddus", 
         "Good Counter": "Grand Inquisitor, Nightsisters (Talzin)",
         "Soft Counter": "",
-        "Dicey": ""
+        "Dicey": "Bo Katan Mandalore"
     },
     27: {
         "Hard Counter": "", 
