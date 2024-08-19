@@ -133,7 +133,7 @@ const propertiesData = {
     // Geos
     15: { 
         "Hard Counter": "Veers IT, EP/MJ", 
-        "Good Counter": "Cere UFU (Omicrons), Omi Boba SoJ",
+        "Good Counter": "Cere UFU (Omicrons)",
         "Soft Counter": "Mauldalorians (Dark Side), Omi Boba SoJ",
         "Dicey": ""
     },
