@@ -18,7 +18,7 @@ const jsonData = [
 const propertiesData = {
     // Coruscant
     1: { 
-        "CMs": "Standard Padme, JMK + CAT",
+        "CMs": "Standard Padme, JMK + CAT, JKR + JKL",
         "SMs":"JML, JKL, HYoda, Old Ben, GMY",
         "Ships": ""
     },
@@ -42,13 +42,13 @@ const propertiesData = {
     },
     // Felucia (NS)
     5: { 
-        "CMs": "JML, JKL, GMY, GK, JKA",
+        "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU",
         "SMs":"",
         "Ships": "Standard Executor"
     },
     // Geonosis (DS)
     6: { 
-        "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek)",
+        "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek), Bane + Wat (Reek)",
         "SMs": "Standard LV",
         "Ships": ""
     },

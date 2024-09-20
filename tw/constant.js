@@ -49,7 +49,7 @@ const propertiesData = {
     // Jabba
     3: { 
         "Hard Counter": "Standard JMK", 
-        "Good Counter": "SLKR (Datacron)",
+        "Good Counter": "",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -70,7 +70,7 @@ const propertiesData = {
     // Rey
     6: { 
         "Hard Counter": "JML with JKCK", 
-        "Good Counter": ", SLKR (Datacron)",
+        "Good Counter": "",
         "Soft Counter": "SK(Juhani omicron)",
         "Dicey": ""
     },
@@ -91,7 +91,7 @@ const propertiesData = {
     // Leia
     9: { 
         "Hard Counter": "GG with (Omi) DDK", 
-        "Good Counter": "Standard Leia, Bane (Datacron) with Assassin",
+        "Good Counter": "Standard Leia, Kelleran Beq + Mace",
         "Soft Counter": "",
         "Dicey": ""
     },
