@@ -60,7 +60,7 @@ const propertiesData = {
     },
     // Tatooine (NS)
     8: { 
-        "CMs": "Standard JML + GK, Rey (Fennec Mission)",
+        "CMs": "Standard JML + GK, GAS 501st, Rey (Fennec Mission)",
         "SMs":"GI Inquisitors",
         "Ships": "Standard Executor"
     },
