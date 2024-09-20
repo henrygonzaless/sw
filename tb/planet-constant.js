@@ -18,7 +18,7 @@ const jsonData = [
 const propertiesData = {
     // Coruscant
     1: { 
-        "CMs": "Standard Padme, JMK + CAT",
+        "CMs": "Standard Padme, JMK + CAT, JKR + JKL",
         "SMs":"JML, JKL, HYoda, Old Ben, GMY",
         "Ships": ""
     },
@@ -42,7 +42,7 @@ const propertiesData = {
     },
     // Felucia (NS)
     5: { 
-        "CMs": "JML, JKL, GMY, GK, JKA",
+        "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU",
         "SMs":"",
         "Ships": "Standard Executor"
     },
@@ -60,7 +60,7 @@ const propertiesData = {
     },
     // Tatooine (NS)
     8: { 
-        "CMs": "JML, JKL, GMY, GK, Shaak-Ti",
+        "CMs": "Standard JML + GK, Rey (Fennec Mission)",
         "SMs":"GI Inquisitors",
         "Ships": "Standard Executor"
     },
