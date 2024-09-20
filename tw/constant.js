@@ -90,8 +90,8 @@ const propertiesData = {
     },
     // Leia
     9: { 
-        "Hard Counter": "GG with (Omi) DDK", 
-        "Good Counter": "Standard Leia, Kelleran Beq + Mace",
+        "Hard Counter": "", 
+        "Good Counter": "Standard Leia",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -140,7 +140,7 @@ const propertiesData = {
     // Omi DDK
     16: { 
         "Hard Counter": "Sith Empire", 
-        "Good Counter": "Shaak Clones, Raddus, JKR",
+        "Good Counter": "Shaak Clones, Raddus, JKR, Kelleran Beq + Mace",
         "Soft Counter": "Padme, GAS 501st",
         "Dicey": "Veers IT"
     },
