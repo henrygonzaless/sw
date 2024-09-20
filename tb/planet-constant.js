@@ -48,7 +48,7 @@ const propertiesData = {
     },
     // Geonosis (DS)
     6: { 
-        "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek)",
+        "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek), Bane + Wat (Reek)",
         "SMs": "Standard LV",
         "Ships": ""
     },

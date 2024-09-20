@@ -91,7 +91,7 @@ const propertiesData = {
     // Leia
     9: { 
         "Hard Counter": "GG with (Omi) DDK", 
-        "Good Counter": "Standard Leia",
+        "Good Counter": "Standard Leia, Kelleran Beq + Mace",
         "Soft Counter": "",
         "Dicey": ""
     },
