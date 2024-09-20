@@ -140,7 +140,7 @@ const propertiesData = {
     // Omi DDK
     16: { 
         "Hard Counter": "Sith Empire", 
-        "Good Counter": "Shaak Clones, Raddus, JKR, Bo Katan Mandalore",
+        "Good Counter": "Shaak Clones, Raddus, JKR, Bo Katan Mandalore, Kelleran Beq + Mace",
         "Soft Counter": "Padme, GAS 501st",
         "Dicey": "Veers IT"
     },
