@@ -78,9 +78,9 @@ const propertiesData = {
     },
     // Kessel (NS)
     11: { 
-        "CMs": "JML, JKL, GMY, GK, Shaak-Ti",
-        "SMs":"GI Inquisitors",
-        "Ships": "Standard Executor"
+        "CMs": "",
+        "SMs":"",
+        "Ships": ""
     },
     // Haven-Class Medical Station (DS)
     12: { 
