@@ -4,7 +4,7 @@ const jsonData = [
     { "id": 1, "name": "Coruscant (LS)" },
     { "id": 2, "name": "Corellia (NS)" },
     { "id": 3, "name": "Mustafar (DS)" },
-    { "id": 4, "name": "Zeffo (LS)" },
+    { "id": 4, "name": "Bracca (LS)" },
     { "id": 5, "name": "Felucia (NS)" },
     { "id": 6, "name": "Geonosis (DS)" },
     { "id": 7, "name": "Kashyyyk (LS)" },
@@ -20,30 +20,30 @@ const propertiesData = {
     1: { 
         "CMs": "Standard Padme, JMK + CAT, JKR + JKL",
         "SMs":"JML, JKL, HYoda, Old Ben, GMY",
-        "Ships": ""
+        "Ships": "Standard Profundity"
     },
     // Corellia
     2: { 
         "CMs": "Veers (IT)",
-        "SMs":"",
+        "SMs":"Standard Jabba",
         "Ships": "Standard Executor"
     },
     // Mustafar (DS)
     3: { 
-        "CMs": "SLKR (top most), Inquisitors (Left) ",
+        "CMs": "SLKR (top most), Inquisitors (Left), EP + Wat + SE ",
         "SMs":"",
         "Ships": ""
     },
-    // Zeffo (LS)
+    // Bracca (LS)
     4: { 
-        "CMs": "",
-        "SMs":"Cere and Jedi Knight Cal Kestis",
+        "CMs": "JKL + JML Jedi",
+        "SMs":"Cere, Jedi Knight Cal Kestis",
         "Ships": "Standard Profundity"
     },
     // Felucia (NS)
     5: { 
         "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU",
-        "SMs":"",
+        "SMs":"Standard Jabba",
         "Ships": "Standard Executor"
     },
     // Geonosis (DS)
@@ -54,14 +54,14 @@ const propertiesData = {
     },
     // Kashyyyk (LS)
     7: { 
-        "CMs": "",
+        "CMs": "JKL + JML jedi",
         "SMs":"",
-        "Ships": ""
+        "Ships": "Standard Profundity"
     },
     // Tatooine (NS)
     8: { 
         "CMs": "JML Jedi, GAS 501st, GL Rey, Kelleran + GR",
-        "SMs":"GI Inquisitors",
+        "SMs":"GI Inquisitors, JMK + Fennec, Standard Jabba",
         "Ships": "Standard Executor"
     },
     // Dathomir (DS)
@@ -74,7 +74,7 @@ const propertiesData = {
     10: { 
         "CMs": "",
         "SMs":"",
-        "Ships": ""
+        "Ships": "Standard Profundity"
     },
     // Kessel (NS)
     11: { 

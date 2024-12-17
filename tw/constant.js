@@ -28,6 +28,9 @@ const jsonData = [
     { "id": 25, "name": "Mon Mothma"},
     { "id": 26, "name": "Grand Inquisitor"},
     { "id": 27, "name": "Cere Junda UFU"},
+    { "id": 28, "name": "Reva"},
+    { "id": 29, "name": "Queen Amidala"},
+    { "id": 30, "name": "Great Mothers"},
 
 ];
 
@@ -214,12 +217,34 @@ const propertiesData = {
         "Soft Counter": "",
         "Dicey": "Bo Katan Mandalore"
     },
+    // Cere UFU
     27: {
         "Hard Counter": "", 
         "Good Counter": "Sith Empire (Malgus L), Bane Duo",
         "Soft Counter": "",
         "Dicey": ""
     },
+    // Reva
+    28: {
+        "Hard Counter": "", 
+        "Good Counter": "Phoenix CRex, Rogue 1, SK w/ Juhani cron",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    // Qadme
+    29: {
+        "Hard Counter": "", 
+        "Good Counter": "JMK",
+        "Soft Counter": "GAS 501st",
+        "Dicey": ""
+    },
+    // Great Mothers
+    30: {
+        "Hard Counter": "", 
+        "Good Counter": "JMK + Plo Cron",
+        "Soft Counter": "",
+        "Dicey": ""
+    }
 };
 
 function populateDropdown() {
