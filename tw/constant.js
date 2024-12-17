@@ -58,8 +58,8 @@ const propertiesData = {
     },
     // JML
     4: { 
-        "Hard Counter": "Inquisitors, SEE", 
-        "Good Counter": "",
+        "Hard Counter": "SEE", 
+        "Good Counter": "Inquisitors,",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -93,7 +93,7 @@ const propertiesData = {
     },
     // Leia
     9: { 
-        "Hard Counter": "GG with (Omi) DDK", 
+        "Hard Counter": "", 
         "Good Counter": "Standard Leia, Kelleran Beq + Mace",
         "Soft Counter": "",
         "Dicey": ""
@@ -142,7 +142,7 @@ const propertiesData = {
     },
     // Omi DDK
     16: { 
-        "Hard Counter": "Sith Empire", 
+        "Hard Counter": "DR Sith Empire)", 
         "Good Counter": "Shaak Clones, Raddus, JKR, Bo Katan Mandalore, Kelleran Beq + Mace",
         "Soft Counter": "Padme, GAS 501st",
         "Dicey": "Veers IT"
@@ -150,7 +150,7 @@ const propertiesData = {
     // Padme
     17: {
         "Hard Counter": "Traya (Fast)", 
-        "Good Counter": "CLS, Inquisitors (if Heavy Jedi)",
+        "Good Counter": "CLS, Inquisitors (Heavy Jedi)",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -227,7 +227,7 @@ const propertiesData = {
     // Reva
     28: {
         "Hard Counter": "", 
-        "Good Counter": "Phoenix CRex, Rogue 1, SK w/ Juhani cron",
+        "Good Counter": "Phoenix CRex, Rogue 1, SK + Juhani cron",
         "Soft Counter": "",
         "Dicey": ""
     },
