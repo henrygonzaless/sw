@@ -31,6 +31,8 @@ const jsonData = [
     { "id": 28, "name": "Reva"},
     { "id": 29, "name": "Queen Amidala"},
     { "id": 30, "name": "Great Mothers"},
+    { "id": 31, "name": "Boss Nass"},
+    { "id": 32, "name": "GL Ahsoka"},
 
 ];
 
@@ -122,7 +124,7 @@ const propertiesData = {
     // Omi Phasma
     13: { 
         "Hard Counter": "CLS, Raddus", 
-        "Good Counter": "GG with DDK Omicron, Hux FO",
+        "Good Counter": "GG with DDK Omicron, Hux FO, Nightsisters",
         "Soft Counter": "",
         "Dicey": ""
     },
@@ -242,6 +244,18 @@ const propertiesData = {
     30: {
         "Hard Counter": "", 
         "Good Counter": "JMK + Plo Cron",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    31: {
+        "Hard Counter": "", 
+        "Good Counter": "JML, SLKR",
+        "Soft Counter": "",
+        "Dicey": ""
+    },
+    32: {
+        "Hard Counter": "", 
+        "Good Counter": "GL Leia",
         "Soft Counter": "",
         "Dicey": ""
     }
