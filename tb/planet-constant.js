@@ -30,7 +30,7 @@ const propertiesData = {
     },
     // Mustafar (DS)
     3: { 
-        "CMs": "SLKR (top most), Inquisitors (Left), EP + Wat + SE, Great Mothers",
+        "CMs": "SLKR (Top), Inquisitors, EP + Wat + SE, Great Mothers, Zombie Remnants",
         "SMs":"LV",
         "Ships": "Executrix with Sith Fighter/MK6"
     },
