@@ -24,7 +24,7 @@ const propertiesData = {
     },
     // Corellia
     2: { 
-        "CMs": "Veers (IT)",
+        "CMs": "Veers (IT), Cere UFUs",
         "SMs":"Standard Jabba",
         "Ships": "Standard Executor"
     },
@@ -32,7 +32,7 @@ const propertiesData = {
     3: { 
         "CMs": "SLKR (top most), Inquisitors (Left), EP + Wat + SE ",
         "SMs":"",
-        "Ships": ""
+        "Ships": "Executrix with Sith Fighter/MK6"
     },
     // Bracca (LS)
     4: { 
