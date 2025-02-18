@@ -18,21 +18,21 @@ const jsonData = [
 const propertiesData = {
     // Coruscant
     1: { 
-        "CMs": "Standard Padme, JMK + CAT, JKR + JKL",
+        "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen",
         "SMs":"JML, JKL, HYoda, Old Ben, GMY",
-        "Ships": "Standard Profundity"
+        "Ships": "Standard Profundity/Home One"
     },
     // Corellia
     2: { 
-        "CMs": "Veers (IT)",
-        "SMs":"Standard Jabba",
+        "CMs": "Veers (IT), Cere UFUs, LS Mandos",
+        "SMs":"Standard Jabba, Dr. Aphra, Scoundres + GL Rey + JKCK + Malak",
         "Ships": "Standard Executor"
     },
     // Mustafar (DS)
     3: { 
-        "CMs": "SLKR (top most), Inquisitors (Left), EP + Wat + SE ",
-        "SMs":"",
-        "Ships": ""
+        "CMs": "SLKR (top most), Inquisitors (Left), EP + Wat + SE, Great Mothers",
+        "SMs":"LV",
+        "Ships": "Executrix with Sith Fighter/MK6"
     },
     // Bracca (LS)
     4: { 
