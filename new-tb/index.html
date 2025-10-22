@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1 Goals</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+            border: 2px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 3px solid rgba(255, 215, 0, 0.5);
+        }
+        
+        .title {
+            font-size: 48px;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.3);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .planets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .planet-card {
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .planet-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7); /* Adjust transparency here: 0.7 = 70% dark overlay */
+            z-index: 1;
+        }
+        
+        .planet-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .planet-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Dark Side Style - Red theme for Mustafar */
+        .dark_side_style {
+            border-color: rgba(255, 0, 0, 0.5);
+        }
+        
+        .dark_side_style:hover {
+            border-color: #ff0000;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+        }
+        
+        .dark_side_style .planet-name {
+            color: #ff3333;
+            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+        }
+        
+        .dark_side_style .goal-item:before {
+            color: #ff3333;
+        }
+        
+        .dark_side_style .star-rating {
+            color: #ff3333;
+            text-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+        }
+        
+        /* Mix Style - Yellow theme for Coruscant */
+        .mix_style {
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+        
+        .mix_style:hover {
+            border-color: #FFD700;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .mix_style .planet-name {
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+        
+        .mix_style .goal-item:before {
+            color: #FFD700;
+        }
+        
+        .mix_style .star-rating {
+            color: #FFD700;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
+        }
+        
+        /* Light Side Style - Blue theme for Corellia */
+        .light_side_style {
+            border-color: rgba(0, 150, 255, 0.5);
+        }
+        
+        .light_side_style:hover {
+            border-color: #0096ff;
+            box-shadow: 0 10px 30px rgba(0, 150, 255, 0.3);
+        }
+        
+        .light_side_style .planet-name {
+            color: #4da6ff;
+            text-shadow: 0 0 10px rgba(0, 150, 255, 0.8);
+        }
+        
+        .light_side_style .goal-item:before {
+            color: #4da6ff;
+        }
+        
+        .light_side_style .star-rating {
+            color: #4da6ff;
+            text-shadow: 0 0 5px rgba(0, 150, 255, 0.8);
+        }
+        
+        .planet-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+        }
+        
+        .planet-code {
+            text-align: center;
+            font-size: 18px;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+        
+        .goals-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .goal-item {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+			font-size: 22px;
+        }
+        
+        .goal-item:before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            font-size: 15px;
+        }
+        
+        .star-rating {
+            font-weight: bold;
+        }
+        
+        .general-instructions {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 100, 0, 0.1) 100%);
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        
+        .general-instructions h3 {
+            color: #FFD700;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+        
+        .instruction-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            border-left: 4px solid #FFD700;
+			font-size: 22px;
+        }
+        
+        .alert-text {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .emphasis-text {
+            color: #4ecdc4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                ID 66 RotE - Phase 1
+            </div>
+        </div>
+        
+        <div class="planets-grid">
+            <div class="planet-card dark_side_style" style="background-image: url('./assets/mustafar.jpg');">
+                <div class="planet-name">Mustafar </span></div>
+                <div class="planet-code">Dark Side</div>
+                <ul class="goals-list">
+                    <li class="goal-item">
+                        SLKR, FOST, KRU, Hux, Sith Trooper
+                    </li>
+                    <li class="goal-item">
+                        SEE, Malak, Vader, Wat, D. Revan
+                    </li>
+                    <li class="goal-item">
+                        Reva, GI, 7th, 8th, 5th
+                    </li>
+                    <li class="goal-item">
+                        LV (required)
+                    </li>
+                    <li class="goal-item">
+                        Executrix, Scythe, Mark 6, X1, Defender, Interceptor, Shuttle, Gauntlet (50/50)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planet-card mix_style" style="background-image: url('./assets/Corellia-SWCT.webp');">
+                <div class="planet-name">Corellia </span></div>
+                <div class="planet-code">Neutral Zone</div>
+                <ul class="goals-list">
+                    <li class="goal-item">
+                        Veers, Piett, Range, Dark Trooper, Starck
+                    </li>
+                    <li class="goal-item">
+                        Jabba, Boushh, Skiff, Krrsantan, Boba (required)
+                    </li>
+                    <li class="goal-item">
+                        Executor, Hounds Tooth, Xanadu, P1, Razor Crest, IG-2000, Slave 1
+                    </li>
+                </ul>
+            </div>
+
+            <div class="planet-card light_side_style" style="background-image: url('./assets/Coruscant-EotE.webp');">
+                <div class="planet-name">Coruscant </div>
+                <div class="planet-code">Light Side</div>
+                <ul class="goals-list">
+                    <li class="goal-item">
+                        Padme, GK, JKA, C3PO, Snips
+                    </li>
+                    <li class="goal-item">
+                        Leia, Chewpio, Drogan, R2D2, CRex 
+                    </li>
+                    <li class="goal-item">
+                        JML, JKL, HYoda, Old Ben, JKCK (Jedi required)
+                    </li>
+                    <li class="goal-item">
+                        Mace, JMK, Kit, Shaak-Ti, GMY (Mace, Kit, and GR Jedi required)
+                    </li>
+                    <li class="goal-item">
+                        Profundity, Falcon, Outrider, Y-Wing, Biggs, Casian, Ghost
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>
