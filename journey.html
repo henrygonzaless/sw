@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The contact page.">
+
+    <title> ID66 </title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Center content on page */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Table container */
+        .table-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: auto; /* horizontal scroll if needed */
+        }
+
+        /* Table styling */
+        .data-table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            min-width: 300px;
+        }
+
+        /* Header & cells */
+        .data-table th,
+        .data-table td {
+            border: 1px solid #ccc;
+            padding: 12px;
+            text-align: left;
+        }
+
+        /* Header style */
+        .data-table thead {
+            background-color: #f4f4f4;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Responsive vertical scrolling */
+        @media (max-height: 600px) {
+            .table-wrapper {
+                max-height: 60vh;
+                overflow-y: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tw.html">TW</a></li>
+            <li><a href="./tb/tb.html">TB</a></li>
+            <li><a href="journey.html">Journey</a></li>
+        </ul>
+    </nav>
+
+    <div class="table-wrapper">
+    <table class="data-table">
+        <thead>
+            <tr>
+                <th>Quest</th>
+                <th>Node</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>10 Battles with Bariss</td><td>Tier 1 of GMY Journey Event</td></tr>
+            <tr><td>200 Purge</td><td>Last tier of GI Journey Event</td></tr>
+            <tr><td>50 Jedi with Inquisitors</td><td>Mods 9D or DS 9F</td></tr>
+            <tr><td>100 Enemies with DS UFU</td><td> Tier 1 of R2D2 Journey Event (no cost) </td></tr>
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
