@@ -3,49 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TB Reva page">
+    <title>ID66 | Reva Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3e3e;
+            --bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <title> ID66 </title>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            background-image: radial-gradient(circle at 50% 0%, #1a1030 0%, #0a0a0a 75%);
+            min-height: 100vh;
+        }
 
-    <link rel="stylesheet" href="../style.css">
+        /* Fixed Navbar Style */
+        .navbar {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul { display: flex; list-style: none; gap: 20px; }
+        .navbar a { color: #999; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .navbar a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+        /* The Briefing Card Container */
+        .briefing-card {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #bbb;
+        }
+
+        li { margin-bottom: 12px; }
+        li b, li strong { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .briefing-card { margin: 20px; padding: 20px; }
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../tw.html">TW</a></li>
             <li><a href="tb.html">TB</a></li>
-            <li><a href="../journey.html">Journey</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h3> Mods Setup (recommended)</h3>
+
+    <div class="briefing-card">
+        <h1>Third Sister Mission Guide</h1>
+
+        <h3>Mods Setup (Recommended)</h3>
         <ol> 
-            <li> 7th Sister (Health, Speed; 317-353) </li>
-            <li> 8th Brother (Crit Dmg/Chance; 293-307)</li>
-            <li> 5th Brother (Health, Speed; 303)</li>
-            <li> Grand Inquisitor (Health, Offense; 276-288)</li>
-            <li> 9th Sister (Defense; 231-254)</li>
+            <li><b>7th Sister:</b> Health, Speed (317-353)</li>
+            <li><b>8th Brother:</b> Crit Dmg/Chance (293-307)</li>
+            <li><b>5th Brother:</b> Health, Speed (303)</li>
+            <li><b>Grand Inquisitor:</b> Health, Offense (276-288)</li>
+            <li><b>9th Sister:</b> Defense (231-254)</li>
         </ol>
 
-        <h3> Things to Remember</h3>
+        <h3>General Tips</h3>
         <ul>
-            <li> No AOE abilities unless you have tenacity up. This is achieved with 6 stacks of purge then using GI's right-most ability. </li>
-            <li> Save GI's cleanse (middle ability) for when your inquisitors have 6 or more dots. </li>
-            <li> Save 5th Brother's stun for wave 2 unless absolutely needed. </li>
-            <li> Use 7th Sister's heal on the lowest ally on her 2nd turn. </li>
+            <li><b>NO AOE abilities</b> unless you have Tenacity Up (achieved via 6 Purge stacks + GI's 3rd special).</li>
+            <li>Save GI's cleanse (middle ability) for when allies have 6 or more dots.</li>
+            <li>Save 5th Brother's stun for <b>Wave 2</b> unless critical.</li>
         </ul>
 
-        <h3> General Strategy </h3>
+        <h3>Turn Sequence</h3>
         <ol>
-            <li> 7th Sister: Daze on Nebit </li>
-            <li> 5th Brother: Basic on Nebit for purge</li>
-            <li> GI: If Nebit has 6 stacks of purge, use the right-most ability (tenacity up). Otherwise, just basic attack on Nebit to stack purge. </li>
-            <li> 8th Brother: If you have tenacity up, use the aoe and target Scavenger. Otherwise, just basic attack on Nebit to stack purge.</li>
-            <li> 9th Sister: If you have tenacity up, use the aoe and target Scavenger. Otherwise, just basic attack on Nebit to stack purge.</li> 
-            <li> Once Nebit has 6 stacks and you have tenacity up, use all aoe and get Scavenger first.</li>
-        </ol>
+            <li><b>7th Sister:</b> Apply Daze on Chief Nebit.</li>
+            <li><b>5th Brother:</b> Basic attack on Nebit to stack Purge.</li>
+            <li><b>GI:</b> Once Nebit has 6 Purge stacks, use right-most ability for <b>Tenacity Up</b>. Otherwise, Basic.</li>
+            <li><b>8th & 9th Sister:</b> If Tenacity Up is active, use AOE and target <b>Jawa Scavenger</b>. Otherwise, Basic Nebit.</li>
+            <li>Once Nebit is controlled and Scavenger is down, clean up remaining targets.</li>
+        </ol> 
     </div>
+
 </body>
 </html>

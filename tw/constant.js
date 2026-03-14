@@ -93,17 +93,21 @@ function displayIntelligence(id) {
     grid.innerHTML = '';
 
     if (data) {
-        // This loop automatically looks for "Hard Counter", "Good Counter", etc.
         for (const [category, value] of Object.entries(data)) {
             
-            // Only create a box if the counter isn't empty
-            if (value && value.trim() !== "" && value !== "None") {
+            // Only create a box if the counter isn't empty and isn't "None"
+            if (value && value.trim() !== "" && value.toLowerCase() !== "none") {
                 const box = document.createElement('div');
                 box.className = 'intel-box';
                 
+                // NEW: Split the value by comma and wrap each in a div
+                const listItems = value.split(',')
+                    .map(item => `<div class="counter-item">• ${item.trim()}</div>`)
+                    .join('');
+
                 box.innerHTML = `
                     <h3>${category}</h3>
-                    <p>${value}</p>
+                    <div class="intel-content">${listItems}</div>
                 `;
                 
                 grid.appendChild(box);
