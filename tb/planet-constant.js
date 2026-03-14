@@ -17,9 +17,9 @@ const propertiesData = {
     1: { "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen, GLAT", "SMs":"JML + JKL + HYoda + Old Ben + GMY, Mace + Kit + JMK + Shaak + GMY", "Ships": "Standard Profundity/Home One" },
     2: { "CMs": "Veers (IT), Cere UFUs, LS Mandos, JMMW", "SMs":"Standard Jabba, Standard Dr. Aphra, Scoundrels + GL Rey", "Ships": "Standard Executor" },
     3: { "CMs": "SLKR (Top), Inquisitors, EP + Wat + SE, Great Mothers, Enoch Remnants", "SMs":"LV", "Ships": "Executrix with Sith Fighter/MK6" },
-    4: { "CMs": "JKL + JML Jedi", "SMs":"Cere, Jedi Knight Cal Kestis", "Ships": "Standard Profundity" },
-    5: { "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU", "SMs":"Standard Jabba", "Ships": "Standard Executor" },
-    6: { "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek), Bane + Wat (Reek)", "SMs": "Standard LV" },
+    4: { "CMs": "JMMW, JKL + JML Jedi, GL Leia", "SMs":"Cere & Jedi Knight Cal Kestis", "Ships": "Standard Profundity" },
+    5: { "CMs": "LV + CLones", "SMs":"Standard Jabba, Rey + Hondo, SEE + Young Lando,", "Ships": "Standard Executor" },
+    6: { "CMs": "SLKR (Nexu), Inquisitors (Acklay), Enoch Remnants (Reek)", "SMs": "Standard Geos" },
     7: { "CMs": "JKL + JML jedi", "Ships": "Standard Profundity" },
     8: { "CMs": "JML Jedi, GAS 501st, GL Rey, Kelleran + GR", "SMs":"GI Inquisitors, JMK + Fennec, Standard Jabba", "Ships": "Standard Executor" }
 };
