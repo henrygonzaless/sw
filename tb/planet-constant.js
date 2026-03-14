@@ -1,27 +1,41 @@
 const jsonData = [
+    // phase 1
     { "id": 1, "name": "Coruscant (LS)" },
     { "id": 2, "name": "Corellia (NS)" },
     { "id": 3, "name": "Mustafar (DS)" },
+    // phase 2
     { "id": 4, "name": "Bracca (LS)" },
     { "id": 5, "name": "Felucia (NS)" },
     { "id": 6, "name": "Geonosis (DS)" },
-    { "id": 7, "name": "Kashyyyk (LS)" },
-    { "id": 8, "name": "Tatooine (NS)" },
-    { "id": 9, "name": "Dathomir (DS)" },
-    { "id": 10, "name": "Lothal (LS)" },
-    { "id": 11, "name": "Kessel (NS)" },
-    { "id": 12, "name": "Haven-Class Medical Station (DS)" },
+    // phase 3
+    { "id": 7, "name": "Zeffo (LS)" },
+    { "id": 8, "name": "Kashyyyk (LS)" },
+    { "id": 9, "name": "Tatooine (NS)" },
+    { "id": 10, "name": "Dathomir (DS)" },
+    // phase 4
+    { "id": 11, "name": "Lothal (LS)" },
+    { "id": 12, "name": "Kessel (NS)" },
+    { "id": 13, "name": "Haven-Class Medical Station (DS)" },
 ];
 
 const propertiesData = {
-    1: { "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen, GLAT", "SMs":"JML + JKL + HYoda + Old Ben + GMY, Mace + Kit + JMK + Shaak + GMY", "Ships": "Standard Profundity/Home One" },
+    // phase 1
+    1: { "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen, GLAT", "SMs":"JML Jedi, Mace + Kit + JMK + Shaak + GMY", "Ships": "Standard Profundity/Home One" },
     2: { "CMs": "Veers (IT), Cere UFUs, LS Mandos, JMMW", "SMs":"Standard Jabba, Standard Dr. Aphra, Scoundrels + GL Rey", "Ships": "Standard Executor" },
     3: { "CMs": "SLKR (Top), Inquisitors, EP + Wat + SE, Great Mothers, Enoch Remnants", "SMs":"LV", "Ships": "Executrix with Sith Fighter/MK6" },
-    4: { "CMs": "JMMW, JKL + JML Jedi, GL Leia", "SMs":"Cere & Jedi Knight Cal Kestis", "Ships": "Standard Profundity" },
-    5: { "CMs": "LV + CLones", "SMs":"Standard Jabba, Rey + Hondo, SEE + Young Lando,", "Ships": "Standard Executor" },
-    6: { "CMs": "SLKR (Nexu), Inquisitors (Acklay), Enoch Remnants (Reek)", "SMs": "Standard Geos" },
-    7: { "CMs": "JKL + JML jedi", "Ships": "Standard Profundity" },
-    8: { "CMs": "JML Jedi, GAS 501st, GL Rey, Kelleran + GR", "SMs":"GI Inquisitors, JMK + Fennec, Standard Jabba", "Ships": "Standard Executor" }
+    // phase 2
+    4: { "CMs": "JMMW, GL Leia", "SMs":"Cere & Jedi Knight Cal Kestis, JKL + JML Jedi", "Ships": "Standard Profundity" },
+    5: { "CMs": "LV + Clones", "SMs":"Standard Jabba, Rey + Hondo, SEE + Young Lando", "Ships": "Standard Executor" },
+    6: { "CMs": "SLKR (Nexu), Inquisitors (Acklay), Enoch Remnants (Reek)", "SMs": "Standard Geos", "Ships": "Standard Leviathan" },
+    // phase 3
+    7: { "CMs": "Standard JMK", "SMs": "JKCK + JML Jedi, Rex + Clones, Rey UFUs", "Ships": "Standard Negotiator" },
+    8: { "CMs": "JMMW, GL Leia", "Ships": "Standard Profundity" },
+    9: { "CMs": "JML Jedi, LV Clones, GL Rey", "SMs":"GI Inquisitors, SLKR + Fennec, Standard Jabba, BKM Mandos", "Ships": "Standard Executor" },
+    10: { "CMs": "DR + SEE, Enoch Remnants", "SMs":"LV Clones, Aphra + DDK + Wampa + Piett + DV, GM", "Ships": "Standard Executor" },
+    // phase 4
+    11: { "CMs": "GLAT, JMK", "Ships": "Standard Negotiator" },
+    12: { "CMs": "Padme + Ezra + GK + CAT + Snips", "SMs":"Jabba", "Ships": "Standard Executor" },
+    13: { "CMs": "Enoch Remnants", "SMs":"Inquisitors Clones" },
 };
 
 function init() {
@@ -48,7 +62,7 @@ function init() {
                     // 2. Map each item to a <div> with some padding
                     // 3. Join them together
                     const formattedValue = val.split(',').map(item => 
-                        `<div style="margin-bottom: 5px; display: block;">• ${item.trim()}</div>`
+                        `<div style="margin-bottom: 5px; display: block;"> ${item.trim()}</div>`
                     ).join('');
 
                     box.innerHTML = `
