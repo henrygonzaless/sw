@@ -3,39 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TB Zeffo page">
+    <title>ID66 | Zeffo </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3e3e;
+            --bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <title> ID66 </title>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            background-image: radial-gradient(circle at 50% 0%, #1a1030 0%, #0a0a0a 75%);
+            min-height: 100vh;
+        }
 
-    <link rel="stylesheet" href="../style.css">
+        /* Fixed Navbar Style */
+        .navbar {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar ul { display: flex; list-style: none; gap: 20px; }
+        .navbar a { color: #999; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .navbar a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+        /* The Briefing Card Container */
+        .briefing-card {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-bottom: 5px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 15px;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+            line-height: 1.8;
+            color: #bbb;
+        }
+
+        li { margin-bottom: 12px; }
+        li b { color: var(--primary); }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .briefing-card { margin: 20px; padding: 20px; }
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../tw.html">TW</a></li>
             <li><a href="tb.html">TB</a></li>
-            <li><a href="../journey.html">Journey</a></li>
+            <li><a href="../contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <h3> Mods Setup (recommended)</h3>
+
+    <div class="briefing-card">
+        <h1>Zeffo Unlock Mission </h1>
+
+        <h3>Mods Setup (Recommended)</h3>
         <ol> 
-            <li> Cere Junda (Health; 143-248) </li>
-            <li> Jedi Knight Cal Kestis (Health, Speed; 255-303)</li>
+            <li><b>Cere Junda:</b> Health (143-248 Speed)</li>
+            <li><b>Jedi Knight Cal Kestis:</b> Health, Speed (255-303 Speed)</li>
         </ol>
 
-        <h3> Things to Remember</h3>
+        <h3>Operational Parameters</h3>
         <ul>
-            <li> Switch between stances as much as you can. </li>
+            <li>Switch between stances as much as possible to maintain tactical advantage.</li>
         </ul>
 
-        <h3> General Strategy </h3>
+        <h3>Engagement Strategy</h3>
         <ol>
-            <li> In wave 1, focus damage/armor shred on one enemy and instakill the other. </li>
-            <li> In wave 2, use the instakill on the inquisitor and focus the other. </li>
+            <li><b>Wave 1:</b> Focus damage/armor shred on one enemy and utilize Cal's instakill on the other.</li>
+            <li><b>Wave 2:</b> Execute immediate instakill on the Inquisitor, then consolidate fire on the remaining target.</li>
         </ol> 
     </div>
+
 </body>
 </html>

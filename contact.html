@@ -3,32 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The contact page.">
+    <meta name="description" content="ID66 Contact and Contributions">
+    <title>ID66 | Secure Uplink</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3e3e;
+            --bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
 
-    <title> ID66 </title>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <link rel="stylesheet" href="style.css">
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            background-image: radial-gradient(circle at 50% 0%, #301010 0%, #0a0a0a 75%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar ul { display: flex; list-style: none; gap: 20px; }
+        .navbar a { color: #999; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .navbar a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+        /* Main Container */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .contact-card {
+            width: 100%;
+            max-width: 600px;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-top: 3px solid var(--primary);
+            border-radius: 12px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            font-size: 0.7rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            display: block;
+            opacity: 0.8;
+        }
+
+        .contact-section {
+            margin-bottom: 35px;
+        }
+
+        .contact-section h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        /* Action Buttons */
+        .action-link {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid var(--primary);
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            background: rgba(255, 62, 62, 0.05);
+        }
+
+        .action-link:hover {
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+            color: #000;
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 0.65rem;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 480px) {
+            .contact-card { padding: 30px 20px; }
+        }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="tw.html">TW</a></li>
             <li><a href="./tb/tb.html">TB</a></li>
-            <li><a href="journey.html">Journey</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+
         </ul>
     </nav>
-    <div class="container">
-        <ol>
-            <li> Update or Suggest a Counter?</li>
-             <ul> 
-                <li>Please fill in the form here <a href="https://forms.gle/TE5hxJ6WMnugMDD97">link</a>. </li>
-            </ul>
-            <li>Become a Contributor to the Repository? </li>
-            <ul>
-                <li> Check <a href="https://github.com/henrygonzaless/sw/pulls">here</a>.</li>
-            </ul>
-        </ol>
+
+    <div class="main-content">
+        <div class="contact-card">
+
+            <div class="contact-section">
+                <h2>Feedback</h2>
+                <p style="color: #999; margin-bottom: 15px; font-size: 0.9rem;">
+                    Update or suggest a counter to improve our database records.
+                </p>
+                <a href="https://forms.gle/TE5hxJ6WMnugMDD97" class="action-link" target="_blank">Submit Updates</a>
+            </div>
+
+            <div class="contact-section">
+                <h2>Open Contribution</h2>
+                <p style="color: #999; margin-bottom: 15px; font-size: 0.9rem;">
+                    Become a contributor to the core repository and help build ID66.
+                </p>
+                <a href="https://github.com/henrygonzaless/sw/pulls" class="action-link" target="_blank">Contribute on GitHub</a>
+            </div>
+
+        </div>
     </div>
+
 </body>
 </html>

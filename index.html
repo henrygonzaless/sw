@@ -2,182 +2,206 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The main page">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; media-src 'self'; img-src 'self' data:;">
-    <title> ID66 </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ID66 | Imperial Decree</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        .navbar {
-            background-color: #333;
-            padding: 10px 0;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;        
+        :root {
+            --primary: #ff3e3e;
+            --bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
         }
 
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0 20px; /* Add padding to create space around the navigation items */
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        .navbar ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        .navbar li:last-child {
-            margin-right: 0;
-        }
-
-        .navbar ul li a {
-            color: white;
-            text-decoration: none;
-        }
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        .navbar li:last-child {
-            margin-right: 0;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-        }
-        .content {
-            margin-top: 50px; /* Adjusted to accommodate the navbar */
-            padding: 20px;
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center; /* Center align content */
-        }
-        h1 {
-            margin: 20px 0;
-            color: #333
-        }
-        .box-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-        }
-        .box {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            width: 200px;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; 
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            border-radius: 8px;
-            box-sizing: border-box;
-            text-align: left; /* Ensure h2 text alignment */
+            background-image: radial-gradient(circle at 50% 0%, #301010 0%, #0a0a0a 75%);
         }
+
+        /* Compact Navbar */
+        .navbar {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            gap: clamp(15px, 4vw, 30px);
+        }
+
+        .navbar a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+        /* Main Wrapper */
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            padding: 1vh 5vw;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: clamp(1.2rem, 4vh, 2.2rem);
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            margin: 1vh 0;
+        }
+
+        /* Grid - Adaptive for height and width */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .grid { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: clamp(8px, 1.5vh, 15px);
+            border-top: 2px solid var(--primary);
+        }
+
         .box h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.2em;
+            font-size: clamp(0.75rem, 1.8vh, 0.9rem);
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 4px;
         }
-        .box ul {
-            margin: 0;
-            padding-left: 20px;
-            list-style-type: disc;
+
+        .box ul { list-style: none; }
+
+        .box li {
+            font-size: clamp(0.65rem, 1.4vh, 0.85rem);
+            color: #ccc;
+            margin-bottom: 2px;
+            display: flex;
+            align-items: center;
         }
-        .box ul li {
-            margin-bottom: 5px;
+
+        .box li::before { content: ""; width: 4px; height: 4px; background: var(--primary); margin-right: 8px; border-radius: 50%; display: inline-block; }
+
+        /* Video Section - Fixed Zoom */
+        .video-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 0; /* Critical for flex-grow to work properly in some browsers */
+            margin: 1vh 0;
         }
-        .video-container {
-            margin-top: 20px;
-            width: 640px;
-            max-width: 100%;
-            position: relative;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .video-wrapper {
-            width: 100%;
-            height: 360px; /* Fixed height */
-            overflow: hidden; /* Prevents the video from exceeding its container */
-        }
-        video {
-            width: 100%;
+
+        .video-frame {
             height: 100%;
-            object-fit: contain; /* Ensures the video fits within the container */
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video { 
+            max-height: 100%; 
+            max-width: 100%; 
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            /* object-fit: contain prevents the "zoomed in" cropping */
+            object-fit: contain; 
+        }
+
+        /* Mobile Landscape fix */
+        @media (max-height: 450px) {
+            h1 { display: none; } /* Hide title on very short screens to save space */
+            .navbar { height: 35px; }
         }
     </style>
 </head>
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="tw.html">TW</a></li>
             <li><a href="./tb/tb.html">TB</a></li>
-            <li><a href="journey.html">Journey</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="content">
+
+    <div class="main-container">
         <h1>Imperial Decree 66</h1>
 
-        <div class="box-container">
+        <div class="grid">
             <div class="box">
                 <h2>General</h2>
                 <ul>
                     <li>470M+ GP</li>
                     <li>Semi-Competitive</li>
-                    <li>Discord</li>
-                    <li>Currently Full</li>
+                    <li>Discord Presence</li>
+                    <li>Status: Full</li>
                 </ul>
             </div>
             <div class="box">
                 <h2>Raid (Naboo)</h2>
                 <ul>
                     <li>22.5M Reward Box</li>
+                    <li>High Participation</li>
                 </ul>
-            </div>        
+            </div>
             <div class="box">
                 <h2>TW</h2>
                 <ul>
-                    <li>Droid brains in rewards</li>
-                    <li>Minimum 100 (total) banners</li>
-                    <li>Joining is <b>not</b> required</li>
+                    <li>Droid Brains</li>
+                    <li>100 Banner Min</li>
+                    <li>Joining Optional</li>
                 </ul>
-            </div>        
+            </div>
             <div class="box">
                 <h2>TB (RotE)</h2>
                 <ul>
-                    <li>30+ stars per run</li>
-                    <li>12+ Reva shards per run</li>
-                    <li>Volunteer system for platoons</li>
-                    <li>Working towards Zeffo</li>
+                    <li>30+ Stars</li>
+                    <li>12+ Reva Shards</li>
+                    <li>Zeffo Ready</li>
                 </ul>
-            </div>        
-            <!-- Add more boxes as needed -->
+            </div>
         </div>
-        <div class="video-container">
-            <div class="video-wrapper">
-                <video controls muted poster="">
+
+        <div class="video-section">
+            <div class="video-frame">
+                <video autoplay loop muted playsinline>
                     <source src="assets/recruitment.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>

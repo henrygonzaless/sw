@@ -1,5 +1,3 @@
-
-// JSON object
 const jsonData = [
     { "id": 1, "name": "Coruscant (LS)" },
     { "id": 2, "name": "Corellia (NS)" },
@@ -16,131 +14,52 @@ const jsonData = [
 ];
 
 const propertiesData = {
-    // Coruscant
-    1: { 
-        "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen",
-        "SMs":"JML, JKL, HYoda, Old Ben, GMY",
-        "Ships": "Standard Profundity/Home One"
-    },
-    // Corellia
-    2: { 
-        "CMs": "Veers (IT), Cere UFUs, LS Mandos",
-        "SMs":"Standard Jabba, Dr. Aphra, Scoundres + GL Rey + JKCK + Malak",
-        "Ships": "Standard Executor"
-    },
-    // Mustafar (DS)
-    3: { 
-        "CMs": "SLKR (Top), Inquisitors, EP + Wat + SE, Great Mothers, Zombie Remnants",
-        "SMs":"LV",
-        "Ships": "Executrix with Sith Fighter/MK6"
-    },
-    // Bracca (LS)
-    4: { 
-        "CMs": "JKL + JML Jedi",
-        "SMs":"Cere, Jedi Knight Cal Kestis",
-        "Ships": "Standard Profundity"
-    },
-    // Felucia (NS)
-    5: { 
-        "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU",
-        "SMs":"Standard Jabba",
-        "Ships": "Standard Executor"
-    },
-    // Geonosis (DS)
-    6: { 
-        "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek), Bane + Wat (Reek)",
-        "SMs": "Standard LV",
-        "Ships": ""
-    },
-    // Kashyyyk (LS)
-    7: { 
-        "CMs": "JKL + JML jedi",
-        "SMs":"",
-        "Ships": "Standard Profundity"
-    },
-    // Tatooine (NS)
-    8: { 
-        "CMs": "JML Jedi, GAS 501st, GL Rey, Kelleran + GR",
-        "SMs":"GI Inquisitors, JMK + Fennec, Standard Jabba",
-        "Ships": "Standard Executor"
-    },
-    // Dathomir (DS)
-    9: { 
-        "CMs": "",
-        "SMs": "",
-        "Ships": ""
-    },
-    // Lothal (LS)
-    10: { 
-        "CMs": "",
-        "SMs":"",
-        "Ships": "Standard Profundity"
-    },
-    // Kessel (NS)
-    11: { 
-        "CMs": "",
-        "SMs":"",
-        "Ships": ""
-    },
-    // Haven-Class Medical Station (DS)
-    12: { 
-        "CMs": "",
-        "SMs": "",
-        "Ships": ""
-    },
+    1: { "CMs": "Standard Padme, JMK + CAT, GL Leia, MM + Luthen", "SMs":"JML, JKL, HYoda, Old Ben, GMY", "Ships": "Standard Profundity/Home One" },
+    2: { "CMs": "Veers (IT), Cere UFUs, LS Mandos", "SMs":"Standard Jabba, Dr. Aphra, Scoundres + GL Rey + JKCK + Malak", "Ships": "Standard Executor" },
+    3: { "CMs": "SLKR (Top), Inquisitors, EP + Wat + SE, Great Mothers, Zombie Remnants", "SMs":"LV", "Ships": "Executrix with Sith Fighter/MK6" },
+    4: { "CMs": "JKL + JML Jedi", "SMs":"Cere, Jedi Knight Cal Kestis", "Ships": "Standard Profundity" },
+    5: { "CMs": "Standard JML + JKA, CLS Rebels, Rey + UfU", "SMs":"Standard Jabba", "Ships": "Standard Executor" },
+    6: { "CMs": "SLKR (Nexu), Inquisitors (Acklay), SEE + Wat (Reek), Bane + Wat (Reek)", "SMs": "Standard LV" },
+    7: { "CMs": "JKL + JML jedi", "Ships": "Standard Profundity" },
+    8: { "CMs": "JML Jedi, GAS 501st, GL Rey, Kelleran + GR", "SMs":"GI Inquisitors, JMK + Fennec, Standard Jabba", "Ships": "Standard Executor" }
 };
 
-function populateDropdown() {
-    const dropdown = document.getElementById('dropdown')
-
-    // Sort the jsonData alphabetically by the name property
-    // jsonData.sort((a, b) => a.name.localeCompare(b.name))
-
+function init() {
+    const dropdown = document.getElementById('planet-dropdown');
     jsonData.forEach(item => {
-        const option = document.createElement('option')
-        option.value = item.id
-        option.textContent = item.name
-        dropdown.appendChild(option)
+        const opt = document.createElement('option');
+        opt.value = item.id;
+        opt.textContent = item.name;
+        dropdown.appendChild(opt);
+    });
+    dropdown.addEventListener('change', (e) => {
+        const grid = document.getElementById('planet-grid');
+        const data = propertiesData[e.target.value];
+        grid.innerHTML = '';
+        
+        if (data) {
+            Object.entries(data).forEach(([key, val]) => {
+                if (val) {
+                    const box = document.createElement('div');
+                    box.className = 'planet-box';
+
+                    // THE NEW LOGIC:
+                    // 1. Split by comma
+                    // 2. Map each item to a <div> with some padding
+                    // 3. Join them together
+                    const formattedValue = val.split(',').map(item => 
+                        `<div style="margin-bottom: 5px; display: block;">• ${item.trim()}</div>`
+                    ).join('');
+
+                    box.innerHTML = `
+                        <h3>${key}</h3>
+                        <div class="box-content">${formattedValue}</div>
+                    `;
+                    grid.appendChild(box);
+                }
+            });
+        }
     });
 }
 
-// Function to initialize table headers based on propertiesData keys
-function initializeTableHeaders() {
-    const tableHeaders = document.getElementById('tableHeaders')
-    const firstKey = Object.keys(propertiesData)[0]
-    if (firstKey) {
-        const properties = propertiesData[firstKey]
-        for (const key in properties) {
-            const th = document.createElement('th')
-            th.textContent = key
-            tableHeaders.appendChild(th)
-        }
-    }
-}
-
-// Function to display properties in table based on selected option
-function displayProperties(optionId) {
-    const tableValues = document.getElementById('tableValues')
-    tableValues.innerHTML = ''
-
-    const properties = propertiesData[optionId]
-    if (properties) {
-        for (const key in properties) {
-            const td = document.createElement('td')
-            td.textContent = properties[key]
-            tableValues.appendChild(td)
-        }
-    }
-}
-
-// Event listener for dropdown change
-document.getElementById('dropdown').addEventListener('change', function() {
-    const selectedOptionId = this.value
-    displayProperties(selectedOptionId)
-});
-
-// Call the function to populate the dropdown and initialize the table headers when the page loads
-window.onload = function() {
-    populateDropdown()
-    initializeTableHeaders()
-};
+window.onload = init;
