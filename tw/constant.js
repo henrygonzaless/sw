@@ -36,28 +36,28 @@ const jsonData = [
 
 const propertiesData = {
     // Note: Kept your data structure exactly the same
-    1: { "Hard Counter": "Standard JMK", "Good Counter": "JML with Jedi Knight Cal", "Soft Counter": "None", "Dicey": "None" },
-    2: { "Hard Counter": "Standard JMK", "Good Counter": "JML with Jedi Knight Cal", "Soft Counter": "None", "Dicey": "None" },
-    3: { "Hard Counter": "Standard JMK", "Good Counter": "None", "Soft Counter": "None", "Dicey": "None" },
-    4: { "Hard Counter": "SEE", "Good Counter": "Inquisitors", "Soft Counter": "None", "Dicey": "None" },
+    1: { "Hard Counter": "", "Good Counter": "BKM", "Soft Counter": "Standard JMK, JML with Jedi Knight Cal", "Dicey": "None" },
+    2: { "Hard Counter": "", "Good Counter": "Standard JMK", "Soft Counter": "JML with Jedi Knight Cal", "Dicey": "None" },
+    3: { "Hard Counter": "", "Good Counter": "Standard JMK", "Soft Counter": "None", "Dicey": "None" },
+    4: { "Hard Counter": "SEE", "Good Counter": "Reva Inquisitors", "Soft Counter": "None", "Dicey": "None" },
     5: { "Hard Counter": "SEE", "Good Counter": "Inquisitors", "Soft Counter": "None", "Dicey": "None" },
-    6: { "Hard Counter": "JML with JKCK", "Good Counter": "None", "Soft Counter": "SK(Juhani omicron)", "Dicey": "None" },
-    7: { "Hard Counter": "Standard JML, JMK", "Good Counter": "None", "Soft Counter": "None", "Dicey": "None" },
-    8: { "Hard Counter": "Standard JMK", "Good Counter": "JML with Jedi Knight Cal, SLKR", "Soft Counter": "None", "Dicey": "None" },
-    9: { "Hard Counter": "None", "Good Counter": "Standard Leia, Kelleran Beq + Mace", "Soft Counter": "None", "Dicey": "None" },
+    6: { "Hard Counter": "", "Good Counter": "JML with JKCK, Cere UFUs", "Soft Counter": "SK(Juhani omicron)", "Dicey": "None" },
+    7: { "Hard Counter": "", "Good Counter": "Standard JML, JMK", "Soft Counter": "None", "Dicey": "None" },
+    8: { "Hard Counter": "Standard JMK, SLKR", "Good Counter": "JML with Jedi Knight Cal", "Soft Counter": "None", "Dicey": "None" },
+    9: { "Hard Counter": "None", "Good Counter": "Standard Leia, Kelleran Beq + Mace, SLKR + DRey", "Soft Counter": "None", "Dicey": "None" },
     10: { "Hard Counter": "GAS", "Good Counter": "JKL", "Soft Counter": "None", "Dicey": "None" },
     11: { "Hard Counter": "CLS (Faster Han)", "Good Counter": "EP", "Soft Counter": "None", "Dicey": "None" },
     12: { "Hard Counter": "CLS", "Good Counter": "GAS", "Soft Counter": "None", "Dicey": "None" },
     13: { "Hard Counter": "CLS, Raddus", "Good Counter": "GG with DDK Omicron, Hux FO, Nightsisters", "Soft Counter": "None", "Dicey": "None" },
-    14: { "Hard Counter": "CLS", "Good Counter": "None", "Soft Counter": "None", "Dicey": "None" },
+    14: { "Hard Counter": "", "Good Counter": "CLS", "Soft Counter": "None", "Dicey": "None" },
     15: { "Hard Counter": "Veers IT, EP/MJ", "Good Counter": "Cere UFU (Omicrons)", "Soft Counter": "Mauldalorians (Dark Side), Omi Boba SoJ", "Dicey": "None" },
-    16: { "Hard Counter": "DR Sith Empire)", "Good Counter": "Shaak Clones, Raddus, JKR, Bo Katan Mandalore, Kelleran Beq + Mace", "Soft Counter": "Padme, GAS 501st", "Dicey": "Veers IT" },
-    17: { "Hard Counter": "Traya (Fast)", "Good Counter": "CLS, Inquisitors (Heavy Jedi)", "Soft Counter": "None", "Dicey": "None" },
+    16: { "Hard Counter": "DR Sith Empire)", "Good Counter": "GAS 501st, Shaak Clones, Raddus, JKR, Bo Katan Mandalore, Kelleran Beq + Mace", "Soft Counter": "Padme", "Dicey": "Veers IT" },
+    17: { "Hard Counter": "Traya (Fast)", "Good Counter": "CLS, Inquisitors (if Jedi present)", "Soft Counter": "None", "Dicey": "None" },
     18: { "Hard Counter": "Raddus", "Good Counter": "CLS, Veers IT", "Soft Counter": "None", "Dicey": "None" },
-    19: { "Hard Counter": "None", "Good Counter": "GAS, Tuskens, Veers IT", "Soft Counter": "Phoenix with Rex, Iden IT, Maul, BH(Fetts)", "Dicey": "None" },
+    19: { "Hard Counter": "GAS 501st", "Good Counter": "Tuskens, Veers IT", "Soft Counter": "Phoenix with Rex, Iden IT, Maul, BH(Fetts)", "Dicey": "None" },
     20: { "Hard Counter": "None", "Good Counter": "CLS", "Soft Counter": "None", "Dicey": "Traya" },
-    21: { "Hard Counter": "DTMG", "Good Counter": "Nightsisters, Inquisitors, UFU, Malgus SE", "Soft Counter": "None", "Dicey": "None" },
-    22: { "Hard Counter": "None", "Good Counter": "Finn/Zorii", "Soft Counter": "None", "Dicey": "None" },
+    21: { "Hard Counter": "DTMG", "Good Counter": "Nightsisters, Inquisitors, UFU, Malgus SE", "Soft Counter": "GAS 501st", "Dicey": "None" },
+    22: { "Hard Counter": "None", "Good Counter": "Finn/Zorii, CLS, JTR Resistance", "Soft Counter": "None", "Dicey": "None" },
     23: { "Hard Counter": "GAS, Raddus", "Good Counter": "None", "Soft Counter": "None", "Dicey": "None" },
     24: { "Hard Counter": "Sith Empire, Starkiller", "Good Counter": "Padme, Cere UFU, Tuskens", "Soft Counter": "None", "Dicey": "None" },
     25: { "Hard Counter": "GAS, CLS, Traya", "Good Counter": "Veers IT", "Soft Counter": "Cere UFU, Finn/Zorii", "Dicey": "None" },
@@ -67,7 +67,7 @@ const propertiesData = {
     29: { "Hard Counter": "None", "Good Counter": "JMK", "Soft Counter": "GAS 501st", "Dicey": "None" },
     30: { "Hard Counter": "None", "Good Counter": "JMK + Plo Cron", "Soft Counter": "None", "Dicey": "None" },
     31: { "Hard Counter": "None", "Good Counter": "JML, SLKR", "Soft Counter": "None", "Dicey": "None" },
-    32: { "Hard Counter": "None", "Good Counter": "GL Leia", "Soft Counter": "None", "Dicey": "None" }
+    32: { "Hard Counter": "None", "Good Counter": "GL Leia", "Soft Counter": "GM", "Dicey": "None" }
 };
 
 /* --- PART 2: THE SMART LOGIC (Room to Grow) --- */
