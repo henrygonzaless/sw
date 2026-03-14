@@ -1,3 +1,4 @@
+/* --- PART 1: YOUR EXISTING DATA --- */
 const jsonData = [
     { "id": 1, "name": "GL Lord Vader" },
     { "id": 2, "name": "GL Jedi Master Kenobi" },
@@ -69,10 +70,14 @@ const propertiesData = {
     32: { "Hard Counter": "None", "Good Counter": "GL Leia", "Soft Counter": "None", "Dicey": "None" }
 };
 
+/* --- PART 2: THE SMART LOGIC (Room to Grow) --- */
+
 function populateDropdown() {
     const dropdown = document.getElementById('dropdown');
-    jsonData.sort((a, b) => a.name.localeCompare(b.name));
-    jsonData.forEach(item => {
+    // We sort it so GLs and regular teams are easy to find
+    const sortedData = [...jsonData].sort((a, b) => a.name.localeCompare(b.name));
+    
+    sortedData.forEach(item => {
         const option = document.createElement('option');
         option.value = item.id;
         option.textContent = item.name;
@@ -80,39 +85,37 @@ function populateDropdown() {
     });
 }
 
-function initializeTableHeaders() {
-    const tableHeaders = document.getElementById('tableHeaders');
-    const firstKey = Object.keys(propertiesData)[0];
-    if (firstKey) {
-        const properties = propertiesData[firstKey];
-        tableHeaders.innerHTML = ''; // Clear initial
-        for (const key in properties) {
-            const th = document.createElement('th');
-            th.textContent = key;
-            tableHeaders.appendChild(th);
+function displayIntelligence(id) {
+    const grid = document.getElementById('intelligence-grid');
+    const data = propertiesData[id];
+    
+    // Clear the previous search results
+    grid.innerHTML = '';
+
+    if (data) {
+        // This loop automatically looks for "Hard Counter", "Good Counter", etc.
+        for (const [category, value] of Object.entries(data)) {
+            
+            // Only create a box if the counter isn't empty
+            if (value && value.trim() !== "" && value !== "None") {
+                const box = document.createElement('div');
+                box.className = 'intel-box';
+                
+                box.innerHTML = `
+                    <h3>${category}</h3>
+                    <p>${value}</p>
+                `;
+                
+                grid.appendChild(box);
+            }
         }
     }
 }
 
-function displayProperties(optionId) {
-    const tableValues = document.getElementById('tableValues');
-    tableValues.innerHTML = '';
-    const properties = propertiesData[optionId];
-    if (properties) {
-        for (const key in properties) {
-            const td = document.createElement('td');
-            // If the field is empty in JSON, show "No Data" or "-"
-            td.textContent = properties[key] || "—";
-            tableValues.appendChild(td);
-        }
-    }
-}
-
+// Listen for when the user picks a character
 document.getElementById('dropdown').addEventListener('change', function() {
-    displayProperties(this.value);
+    displayIntelligence(this.value);
 });
 
-window.onload = function() {
-    populateDropdown();
-    initializeTableHeaders();
-};
+// Run when the page first loads
+window.onload = populateDropdown;

@@ -2,42 +2,169 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The tw page">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ID66 | TW Intelligence</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff3e3e;
+            --bg: #0a0a0a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
 
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <title> ID66 </title>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #e0e0e0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            background-image: radial-gradient(circle at 50% 0%, #301010 0%, #0a0a0a 75%);
+        }
 
-    <link rel="stylesheet" href="style.css">
+        /* Navbar */
+        .navbar {
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar ul { display: flex; list-style: none; gap: 20px; }
+        .navbar a { color: #999; text-decoration: none; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+        .navbar a:hover { color: var(--primary); text-shadow: 0 0 8px var(--primary); }
+
+        /* Main Container */
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 2vh 5vw;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: clamp(1.2rem, 3vh, 2rem);
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 2vh;
+        }
+
+        /* Search Area */
+        .search-wrapper {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto 3vh auto;
+        }
+
+        /* Update these sections in your <style> tag */
+
+        select {
+            width: 100%;
+            background: #1a1a1a; /* Solid dark background */
+            border: 1px solid var(--primary);
+            color: #ffffff; /* Explicit white text */
+            padding: 12px;
+            border-radius: 8px;
+            font-family: inherit;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            appearance: none; /* Removes default browser styling for a cleaner look */
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+
+        /* This targets the actual list that pops out */
+        select option {
+            background-color: #1a1a1a; /* Ensures list background is dark */
+            color: #ffffff;            /* Ensures text is white */
+            padding: 10px;
+        }
+
+        /* Hover/Focus state */
+        select:focus {
+            box-shadow: 0 0 10px rgba(255, 62, 62, 0.3);
+        }
+
+        /* THE DYNAMIC GRID */
+        #intelligence-grid {
+            flex: 1;
+            display: grid;
+            /* This line makes it responsive: 1 column on mobile, 2 on desktop */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            overflow-y: auto; /* Allows the grid to scroll internally if you add 10+ boxes */
+            padding-bottom: 20px;
+        }
+
+        /* Styling for the dynamically generated boxes */
+        .intel-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            border-top: 2px solid var(--primary);
+            animation: fadeIn 0.4s ease forwards;
+        }
+
+        .intel-box h3 {
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .intel-box p {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Custom Scrollbar for the internal grid */
+        #intelligence-grid::-webkit-scrollbar { width: 5px; }
+        #intelligence-grid::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }
+    </style>
 </head>
 <body>
+
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="tw.html">TW</a></li>
-            <li><a href="./tb/tb.html">TB</a></li>
+            <li><a href="tw.html">TW </a></li>
+            <li><a href="tw-stats.html">TW History</a></li>
             <li><a href="journey.html">Journey</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <div class="dropdown-container">
-            <label for="dropdown">Team to Beat:</label>
+
+    <div class="main-container">
+
+        <div class="search-wrapper">
             <select id="dropdown">
-                <option value="" selected disabled>Select an option</option>
+                <option value="" disabled selected>Search Records...</option>
             </select>
         </div>
-        <div class="table-container">
-            <table id="propertiesTable" border="1">
-                <thead>
-                    <tr id="tableHeaders"></tr>
-                </thead>
-                <tbody>
-                    <tr id="tableValues"></tr>
-                </tbody>
-            </table>
-        </div>
+
+        <div id="intelligence-grid"></div>
     </div>
 
-    <script nonce="bagels12345" src="tw/constant.js"></script>
+    <script src="tw/constant.js"></script>
 </body>
 </html>
